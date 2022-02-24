@@ -1,3 +1,4 @@
+Y
 /*Exercise 2 - Selection
 
 Convert the C program given below which calculates an employee's salary to a C++ program.
@@ -12,17 +13,20 @@ Type = 3
 OtRate = 1700
 Please Note that the input command in C++ is std::cin. This is a representation of the Keyboard.*/
 
-#include <stdio.h>
+#include <iostream>
 int main()
-{
-   double salary, netSalary;
-   int etype, otHrs, otRate;
-   printf("Enter Employee Type : ");
-   scanf("%d", &etype);
-   printf("Enter Salary  : ");
-   scanf("%f", &salary);
-   printf("Enter OtHrs : ");
-   scanf("%d", &otHrs); 
+{ //main function begins program execution
+   double salary, netSalary; //declaring variables
+   int etype, otHrs, otRate; //declaring variables
+  
+  std::cout << "Enter Employee Type : "; //prompt employee tyep
+  std::cin >> etype; //read employee type
+  
+  std::cout << "Enter Salary  : "; //prompt salary
+  std::cin >> salary; //read salary
+  
+  std::cout << "Enter OtHrs : "; //prompt ot hours
+  std::cin >> otHrs;  //read ot hours
    
    switch (etype) {
       case 1 :
@@ -36,9 +40,9 @@ int main()
           break;
    }
 
-
-   netSalary = salary + otHrs* otRate;
-   printf("Net Salary is %f ", netSalary);
+  netSalary = salary + otHrs* otRate; //calculation
+   
+  std::cout<<"Net Salary is "<<netSalary; //print
   
    return 0;
-}
+} //end of the main function
